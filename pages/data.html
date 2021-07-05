@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/data.css">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Data</title>
+</head>
+<body>
+
+    <div class="header">
+        <button id="showForm">Tampilkan Form</button>
+    </div>
+
+    <!-- update/popup -->
+    <div class="updateDiv">
+        <table>
+            <tr>
+                <td><l class="infoEdit"></l></td>
+                <td>:</td>
+                <td class="updateText"></td>
+            </tr>
+            <tr>
+                <td>Data baru</td>
+                <td>:</td>
+                <td>
+                    <input type="text" class="updateText">
+                </td>
+            </tr>
+        </table>
+        <br>
+        <div class="updateButton">
+            <button id="updateData">Update</button>
+            <button id="cencelPop">Cencel</button>
+        </div>
+    </div>
+
+    <div class="content">
+        <!-- input -->
+        <div class="inputData">
+            <table class="table_inputdata">
+                <tr>
+                    <td>NIK</td>
+                    <td>:</td>
+                    <td>
+                        <input type="text" class="data">
+                    </td>
+                </tr>
+                <tr>
+                    <td>No. KK</td>
+                    <td>:</td>
+                    <td>
+                        <input type="text" class="data">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nama</td>
+                    <td>:</td>
+                    <td>
+                        <input type="text" class="data">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tempat/Tgl Lahir</td>
+                    <td>:</td>
+                    <td>
+                        <input type="text" class="data" placeholder="SERANG, HH-BB-TTTT">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jenis kelamin</td>
+                    <td>:</td>
+                    <td>
+                        <input type="checkbox" class="gender" value="LAKI-LAKI"> LAKI-LAKI
+                        <input type="checkbox" class="gender" value="PEREMPUAN"> PEREMPUAN
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gol. Darah</td>
+                    <td>:</td>
+                    <td>
+                        <input type="text" class="data">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Alamat</td>
+                    <td>:</td>
+                    <td>
+                        <input type="text" class="data" value="Kp. DOMAS">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <input type="text" class="data" placeholder="RT/RW">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <input type="text" class="data" placeholder="Kel/Desa" value="DOMAS">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <input type="text" class="data" placeholder="Kecamatan" value="PONTANG">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Agama</td>
+                    <td>:</td>
+                    <td>
+                        <input type="text" class="data" value="ISLAM">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Status Perkawinan</td>
+                    <td>:</td>
+                    <td>
+                        <input type="text" class="data" placeholder="Update">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pekerjaan</td>
+                    <td>:</td>
+                    <td>
+                        <input type="text" class="data" placeholder="Update">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kewarganegaraan</td>
+                    <td>:</td>
+                    <td>
+                        <input type="checkbox" class="civil" value="WNI"> WNI
+                        <input type="checkbox" class="civil" value="WNA"> WNA
+                    </td>
+                </tr>
+                <tr>
+                    <td>Berluka Hingga</td>
+                    <td>:</td>
+                    <td>
+                        <input type="text" class="data" value="SEUMUR HIDUP">
+                    </td>
+                </tr>
+            </table>
+            <div class="btn">
+                <button id="btnSubmit">Tambah Data</button>
+            </div>
+        </div>
+        <br>
+
+        <br>
+        <!-- search -->
+        <div class="search">
+            <input type="text" placeholder="Cari NIK" class="inputSearch"> <button id="btnSearch">Cari</button>
+            <br><br>
+            <input type="text" placeholder="Cari KK" class="inputSearch"> <button id="btnSearchKK">Cari</button>
+        </div>
+
+        <br>
+        <!-- all data -->
+        <div class="showData">
+            <table class="table_showData">
+                <thead class="thead">
+                    <tr>
+                        <th rowspan="2"><div class="numberTamble">NO</div></th>
+                        <th rowspan="2">NIK</th>
+                        <th rowspan="2">NO. KK</th>
+                        <th rowspan="2">NAMA</th>
+                        <th rowspan="2">TEMPAT TANGGAL LAHIR</th>
+                        <th rowspan="2">JENIS KELAMIN</th>
+                        <th rowspan="2">GOL. DARAH</th>
+                        <th colspan="4" id="address">ALAMAT</th>
+                        <th rowspan="2">AGAMA</th>
+                        <th rowspan="2">STATUS PERKAWINAN</th>
+                        <th rowspan="2">PEKERJAAN</th>
+                        <th rowspan="2">KEWARGANEGARAAN</th>
+                        <th rowspan="2">BERLAKU HINGGA</th>
+                    </tr>
+                    <tr>
+                        <th>Kp.</th> 
+                        <th>RT/RW</th> 
+                        <th>Kel/Desa</th> 
+                        <th>Kec</th> 
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+    <script src="../script/data.js"></script>
+</body>
+</html>
